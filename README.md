@@ -1,6 +1,6 @@
 <h1> Spotipy Writer </h1>
 
-a simple python/spotipy script used to write the user's saved songs to a csv file
+a simple python/spotipy script used to write the user's saved songs to a csv file (for backup)
 
 <h3> Usage: </h3>
 
