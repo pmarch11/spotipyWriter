@@ -35,7 +35,10 @@ writer = csv.writer(outfile)
 while True:
 	try:
 		savedTracks = spotifyObject.current_user_saved_tracks(limit=50, offset=startingOffset)
-
+		total_tracks = savedTracks['total']
+		# if there are no more items to import, break out of the while loop
+		if savedTracks['items'] == []:
+			break
 		for item in savedTracks['items']:
 			track = item['track']
 			writer.writerow([track['name'], track['artists'][0]['name']])
